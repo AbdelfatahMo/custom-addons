@@ -6,7 +6,7 @@
     'category': 'Invoicing Management',
     'description': 'Accounting Reports For Odoo 17, Accounting Financial Reports, '
                    'Odoo 17 Financial Reports',
-    'summary': 'Accounting Reports For Odoo 17',
+    'summary': 'Community Accounting Reports For Odoo 17',
     'sequence': '1',
     'author': 'Odoo Mates, Odoo SA',
     'license': 'LGPL-3',

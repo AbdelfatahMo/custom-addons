@@ -23,7 +23,7 @@
     'name': "Website Helpdesk Support Ticket Management",
     'version': '17.0.1.0.1',
     'category': 'Website',
-    'summary': """The website allows for the creation of tickets, which can 
+    'summary': """Community The website allows for the creation of tickets, which can 
     then be controlled from the backend. Furthermore, a bill that includes 
     the service charge can be generated for the ticket for odoo community 
     Edition version 17.""",

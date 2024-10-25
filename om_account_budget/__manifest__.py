@@ -7,7 +7,7 @@
     'category': 'Accounting',
     'version': '17.0.1.0',
     'description': """Use budgets to compare actual with expected revenues and costs""",
-    'summary': 'Odoo 17 Budget Management',
+    'summary': 'Community Odoo 17 Budget Management',
     'sequence': 10,
     'website': 'https://www.odoomates.tech',
     'depends': ['account'],

@@ -28,7 +28,7 @@
     'maintainer': 'Cybrosys Techno Solutions',
     'website': 'https://www.cybrosys.com',
     'category': 'Extra Tools',
-    'summary': 'This module is used to  create reports for'
+    'summary': 'Community This module is used to  create reports for'
                ' models and can be select the fields the user want to print.',
     'description': """Create Excel Reports for Any Models""",
     'depends': ['sale', 'purchase', 'account', 'base'],

@@ -23,7 +23,7 @@
     'name': 'Customize Login Page Style',
     'version': '17.0.1.0.0',
     'category': 'Extra Tools',
-    'summary': 'Customize The Login Page With Different Styles',
+    'summary': 'Community Customize The Login Page With Different Styles',
     'description': 'The Module helps to customize login page with different '
                    'styles',
     'author': 'Cybrosys Techno Solutions',

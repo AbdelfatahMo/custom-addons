@@ -23,7 +23,7 @@
     'name': "Web Responsive",
     'version': '17.0.1.0.1',
     'category': 'Extra Tools',
-    'summary': 'This module helps to create enterprise like app drawer,'
+    'summary': 'Community This module helps to create enterprise like app drawer,'
                'Responsiveness and sticky headers included.',
     'description': """This module helps to create enterprise like app drawer,
      Responsiveness and sticky headers included.""",

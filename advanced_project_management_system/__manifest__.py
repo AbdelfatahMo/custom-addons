@@ -23,7 +23,7 @@
     'name': "Advanced Project Management System",
     "version": "17.0.1.0.0",
     "category": "Project",
-    "summary": "Advanced Project Management System can handle projects,"
+    "summary": "Community Advanced Project Management System can handle projects,"
     "tasks, due dates, checklists",
     "description": """Advanced Project Management System designed to streamline 
     every aspect of your projects. From handling projects and tasks to managing 

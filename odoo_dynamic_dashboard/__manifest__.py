@@ -23,7 +23,7 @@
     'name': "Odoo Dynamic Dashboard",
     'version': '17.0.2.0.1',
     'category': 'Productivity',
-    'summary': """Create Configurable Dashboards Easily""",
+    'summary': """Community Create Configurable Dashboards Easily""",
     'description': """Odoo Dynamic Dashboard, Dynamic Dashboard, Odoo Dashboard, Web Dynamic Dashboard, Dashboard with AI, Analytic Dashboard, AI Dashboard, Odoo17 Dashboard, Responsive Dashboard, Odoo17, Dashboard""",
     'author': 'Cybrosys Techno Solutions',
     'company': 'Cybrosys Techno Solutions',

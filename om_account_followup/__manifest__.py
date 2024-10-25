@@ -5,7 +5,7 @@
     'version': '17.0.2.0.4',
     'category': 'Accounting',
     'description': """Customer FollowUp Management""",
-    'summary': """Customer FollowUp Management""",
+    'summary': """Community Customer FollowUp Management""",
     'author': 'Odoo Mates, Odoo S.A',
     'license': 'LGPL-3',
     'website': 'https://www.odoomates.tech',

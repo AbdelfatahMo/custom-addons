@@ -2,7 +2,7 @@
     'name': 'Real Estate Management',
     'version': '1.0',
     'category': 'Real Estate',
-    'summary': 'Manage properties, sales, leases, tenants, and agents',
+    'summary': 'Community Manage properties, sales, leases, tenants, and agents',
     'description': """
 Real Estate Management Module
 This module allows real estate agencies, property managers, and landlords to manage their properties, agents, tenants, and leases easily.

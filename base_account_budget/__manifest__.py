@@ -23,7 +23,7 @@
     'name': 'Odoo 17 Budget Management',
     'version': '17.0.1.0.1',
     'category': 'Accounting',
-    'summary': """ Budget Management for Odoo 17 Community Edition. """,
+    'summary': """Community  Budget Management for Odoo 17 Community Edition. """,
     'description': """ This module allows accountants to manage analytic and 
     budgets. Once the Budgets are defined (in Accounting/Accounting/Budgets),
     the Project Managers can set the planned amount on each Analytic Account.
