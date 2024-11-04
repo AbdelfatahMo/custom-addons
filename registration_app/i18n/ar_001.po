@@ -1,0 +1,590 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* registration_app
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-03 09:18+0000\n"
+"PO-Revision-Date: 2024-11-03 09:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "<option value=\"\">select...</option>"
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.upload_doc
+msgid "<small class=\"form-text text-muted\">Maximum file size: 10 MB</small>"
+msgstr "<small class=\"form-text text-muted\">أقصى حجم للملف : 10 ميجابايت</small>"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid ""
+"<small id=\"abilities_error\" class=\"text-danger\" "
+"style=\"display:none;\">Please enter a valid number between 1 and "
+"100.</small>"
+msgstr "" 
+"<small id=\"abilities_error\" class=\"text-danger\" "
+"style=\"display:none;\">من فضلك أدخل رقم بين 1 و  "
+"100.</small>"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid ""
+"<small id=\"high_school_error\" class=\"text-danger\" "
+"style=\"display:none;\">Please enter a valid number between 1 and "
+"100.</small>"
+msgstr ""
+"<small id=\"high_school_error\" class=\"text-danger\" "
+"style=\"display:none;\">من فضلك أدخل رقم بين 1 و "
+"100.</small>"
+
+#. module: registration_app
+#: model:mail.template,body_html:registration_app.registration_application_upload_doc_mail
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr>\n"
+"                    <td valign=\"top\">\n"
+"                        <h2>Dear/ <t t-esc=\"object.applicatian_name\"></t></h2>\n"
+"                        <div style=\"font-size: 13px;\">\n"
+"                            Your application is really interesting and we'd like to plan an interview with you.<br>\n"
+"                            Can you please use the button below to schedule it with one of our recruiters?\n"
+"                            <br><br>\n"
+"                        </div>\n"
+"                        <a t-att-href=\"object.document_url\" style=\"background-color: #875a7b; text-decoration: none; color: #fff; padding: 8px 16px 8px 16px; border-radius: 5px;\"><t t-esc=\"object.document_url\"></t></a>\n"
+"                    </td>\n"
+"                </tr>\n"
+"            </table>\n"
+"        "
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_search
+msgid "Abilities +80%"
+msgstr "قدرات +80٪"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__acceptance_rate
+msgid "Acceptance Rate"
+msgstr "معدل القبول"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.actions.server,name:registration_app.registration_application_cron_ir_actions_server
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__age
+msgid "Age"
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "Application Required Information"
+msgstr "المعلومات المطلوبة للتقديم"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "Are you Student Now?"
+msgstr "هل أنت طالب حاليًا؟"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_form
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_list
+msgid "Ask Document"
+msgstr "طلب المستند"
+
+#. module: registration_app
+#. odoo-python
+#: code:addons/registration_app/models/registration_application.py:0
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__document_ask
+#, python-format
+msgid "Ask Document?"
+msgstr "طُلب المستند؟"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__applicatian_birth_date
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "Birth Date"
+msgstr "تاريخ الميلاد"
+
+#. module: registration_app
+#: model:ir.model,name:registration_app.model_slide_channel
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__course_id
+msgid "Course"
+msgstr "دورة"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_slide_channel__current_registration_application
+msgid "Current Registration Application"
+msgstr "عدد طلبات التسجيل الحالي"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__document
+msgid "Document"
+msgstr "المستند"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__applicatian_mail
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: registration_app
+#. odoo-python
+#: code:addons/registration_app/models/registration_application.py:0
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__mail_sent
+#, python-format
+msgid "Email Sent?"
+msgstr "أُرسل البريد الألكتروني؟"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.upload_doc
+msgid "English language test certificate, if any"
+msgstr "شهادة اختبار اللغة الإنجليزية, إن وُجد"
+
+#. module: registration_app
+#: model:ir.model.fields.selection,name:registration_app.selection__registration_application__applicatian_gender__female
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "Female"
+msgstr "أنثى"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,help:registration_app.field_registration_application__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__applicatian_gender
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_search
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__percentage_of_general_abilities
+msgid "General Abilities %"
+msgstr "القدرات العامة ٪"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.upload_doc
+msgid "General Abilities Certificate"
+msgstr "شهادة قدرات عامة"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_search
+msgid "Group By"
+msgstr "مجموعة حسب"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid ""
+"Have you received support from the Human Resources Development Fund (HRDF)?"
+msgstr "هل تم دعمك من صندوق تنمية الموارد البشرية (هدف)؟"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "Have you worked before?"
+msgstr "هل سبق لك العمل"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__high_school_percentage
+msgid "High School %"
+msgstr "نسبة الثانوية العامة %"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_search
+msgid "High School +80%"
+msgstr "نسبة الثانوية العامة +80٪"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.upload_doc
+msgid "High school diploma"
+msgstr "شهادة الثانوية"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__id
+msgid "ID"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,help:registration_app.field_registration_application__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,help:registration_app.field_registration_application__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,help:registration_app.field_registration_application__message_has_error
+#: model:ir.model.fields,help:registration_app.field_registration_application__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+#: model_terms:ir.ui.view,arch_db:registration_app.upload_doc
+msgid "Information"
+msgstr "البيانات"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__is_accepted
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_search
+msgid "Is Accepted?"
+msgstr "مقبول؟"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_search
+msgid "Is Hadf Support?"
+msgstr "دعم (هدف) ؟"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__is_applicatian_student
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_search
+msgid "Is Student?"
+msgstr "طالب؟"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_search
+msgid "Is Work?"
+msgstr "سبق له العمل؟"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__is_applicatian_work
+msgid "Is Working?"
+msgstr "سبق له العمل؟"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields.selection,name:registration_app.selection__registration_application__applicatian_gender__male
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "Male"
+msgstr "ذكر"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_slide_channel__max_registration_application
+msgid "Max Registration Application"
+msgstr "الحد الأقصي لطلبات التسجيل"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__applicatian_mobile
+msgid "Mobile"
+msgstr "رقم الجوال"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "Mobile Number"
+msgstr "رقم الجوال"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__applicatian_name
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "Name"
+msgstr "الاسم"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_form
+msgid "Name..."
+msgstr "الاسم"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__applicatian_national_id
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "National ID"
+msgstr "رقم الهوية الوطنية"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__applicatian_nationality
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "No"
+msgstr "لا"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,help:registration_app.field_registration_application__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,help:registration_app.field_registration_application__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.upload_doc
+msgid "Please"
+msgstr "من فضلك"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.upload_doc
+msgid "Please attach the following documents in one file as PDF"
+msgstr "من فضلك أرفق المستندات في ملف PDF"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_slide_channel__registration_application_ids
+msgid "Registration Application"
+msgstr "تسجيل الطلبات"
+
+#. module: registration_app
+#: model:ir.actions.act_window,name:registration_app.action_registration_application
+#: model:ir.ui.menu,name:registration_app.registration_applications_menu
+msgid "Registration Applications"
+msgstr "تسجيل الطلبات"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_slide_channel__registration_application_url
+msgid "Registration Applications URL"
+msgstr "عنوان تسجيل الطلب"
+
+#. module: registration_app
+#: model:ir.model,name:registration_app.model_registration_application
+msgid "RegistrationApplication"
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_form
+msgid "Registration_application"
+msgstr "تسجيل طلب"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_form
+#: model_terms:ir.ui.view,arch_db:registration_app.view_registration_application_list
+msgid "Send Mail For Document"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,help:registration_app.field_registration_application__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+#: model_terms:ir.ui.view,arch_db:registration_app.upload_doc
+msgid "Submit"
+msgstr "تأكيد"
+
+#. module: registration_app
+#: model:ir.model.fields,help:registration_app.field_registration_application__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__document_url
+msgid "URL To get Doc"
+msgstr "رابط للحصول علي المستند"
+
+#. module: registration_app
+#: model:mail.template,name:registration_app.registration_application_upload_doc_mail
+msgid "Upload Document"
+msgstr "رفع المستند"
+
+#. module: registration_app
+#: model:mail.template,subject:registration_app.registration_application_upload_doc_mail
+msgid "Upload Required Document {{object.course_id.name}}"
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.upload_doc
+msgid "Upload Required Documents"
+msgstr "رفع المستندات المطلوبة"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: registration_app
+#: model:ir.model.fields,help:registration_app.field_registration_application__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "What is the percentage of general abilities?"
+msgstr "ما هي نسبة القدرات العامة؟"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "What is the percentage of high school?"
+msgstr "ما هي نسبة المرحلة الثانوية؟"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_form_view
+msgid "Yes"
+msgstr "نعم"
+
+#. module: registration_app
+#: model:ir.model.fields,field_description:registration_app.field_registration_application__is_applicatian_hadf_support
+msgid "hadf_support"
+msgstr "دعم (هدف)؟"
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_success
+msgid ""
+"تم استلام طلبك وسوف يتم إرسال بريد لكم بعد الانتهاء في حال قبولكم النهائي"
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_upload_document_success
+msgid "تم الاستلام وسوف يتم إرسال بريد لكم بعد الانتهاء في حال قبولكم النهائي"
+msgstr ""
+
+#. module: registration_app
+#: model_terms:ir.ui.view,arch_db:registration_app.portal_registration_application_full
+msgid ""
+"عذرًا، لقد تم الوصول إلى الحد الأقصى لعدد المتقدمين لهذا البرنامج. نرحب بك "
+"للتسجيل في البرامج القادمة، ونشكرك على اهتمامك"
+msgstr ""

@@ -1,0 +1,387 @@
+<odoo>
+  <data>
+
+    <template id="portal_registration_application_success">
+      <t t-call="portal.frontend_layout">
+        <div class="card mt-5" style=" width: 70%; margin: auto;">
+          <div class="rtl">
+            <h3> تم استلام طلبك وسوف يتم إرسال بريد لكم بعد الانتهاء في حال قبولكم النهائي</h3>
+          </div>
+          </div>
+        </t>
+    </template>
+
+    <template id="portal_upload_document_success">
+      <t t-call="portal.frontend_layout">
+        <div class="card mt-5" style=" width: 70%; margin: auto;">
+          <div class="rtl">
+            <h3> تم الاستلام وسوف يتم إرسال بريد لكم بعد الانتهاء في حال قبولكم النهائي</h3>
+          </div>
+          </div>
+        </t>
+    </template>
+
+    <template id="portal_registration_application_full">
+      <t t-call="portal.frontend_layout">
+        <div class="card mt-5" style=" width: 70%; margin: auto;">
+          <div class="rtl">
+            <h3>عذرًا، لقد تم الوصول إلى الحد الأقصى لعدد المتقدمين لهذا البرنامج. نرحب بك للتسجيل في البرامج القادمة، ونشكرك على اهتمامك</h3>
+          </div>
+          </div>
+        </t>
+    </template>
+    <template id="portal_registration_application_form_view">
+      <t t-call="portal.frontend_layout">
+        <!-- onsubmit="return validateFileSize()" -->
+        <form t-att-action="'/registration_application/' + ('%s/' % course.name) + ('%d' % course.id)" method="post" enctype="multipart/form-data" >
+        <div class=" o_portal_details">
+            <div class="container">
+              <div id="wrap" class="container">
+                <h3 class=" mt-5">
+                  <t t-esc="course.name" /> Application Required Information </h3>
+                <div class="row mt-2 ">
+                  <section id="forms" class="col-12 col-md-9 s_website_form">
+                    <!-- onsubmit="return validateFileSize()" -->
+                    <form t-att-action="'/registration_application/' + ('%s/' % course.name) + ('%d' % course.id)" method="post" class="s_website_form" enctype="multipart/form-data">
+                      <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                      <div class="col-lg-12" style="margin-top: 2%">
+                        <div t-if="error_message" class="alert alert-danger" role="alert">
+                          <t t-foreach="error_message" t-as="err">
+                            <t t-esc="err" />
+                            <br />
+                          </t>
+                        </div>
+                      </div>
+
+                      <div class="card md-2" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width: 100%; margin: auto;">
+                        <div class="card-header bg-primary text-white">
+                          <h3> Information</h3>
+                        </div>
+                        <div class="card-body">
+                          <div class="form-group row form-field o_website_form_required_custom mb-3" data-type="char" data-name="Field">
+                            <div class="col-lg-3 col-md-4 ">
+                              <label class="col-form-label" for="name">
+                                Name
+                              </label>
+                            </div>
+                            <div class="col-lg-7 col-md-8">
+                              <input class="form-control o_website_form_input" name="name" required="True">
+                              </input>
+                            </div>
+                          </div>
+
+                          <div class="form-group row form-field o_website_form_required_custom mb-3" data-type="char" data-name="Field">
+                            <div class="col-lg-3 col-md-4 ">
+                              <label class="col-form-label" for="national_id">
+                                National ID
+                              </label>
+                            </div>
+                            <div class="col-lg-7 col-md-8">
+                              <input class="form-control o_website_form_input" name="national_id" required="True">
+                              </input>
+                            </div>
+                          </div>
+
+                          <div class="form-group row form-field o_website_form_required_custom mb-3" data-type="char" data-name="Field">
+                            <div class="col-lg-3 col-md-4 ">
+                              <label class="col-form-label" for="mobile">
+                                Mobile Number
+                              </label>
+                            </div>
+                            <div class="col-lg-7 col-md-8">
+                              <input class="form-control o_website_form_input" name="mobile" required="True">
+                              </input>
+                            </div>
+                          </div>
+
+                          <div class="form-group row form-field o_website_form_required_custom mb-3" data-type="char" data-name="Field">
+                            <div class="col-lg-3 col-md-4 ">
+                              <label class="col-form-label" for="email">
+                                Email
+                              </label>
+                            </div>
+                            <div class="col-lg-7 col-md-8">
+                              <input class="form-control o_website_form_input" name="email" required="True">
+                              </input>
+                            </div>
+                          </div>
+
+                          <div class="form-group row form-field o_website_form_required_custom mb-3" data-type="boolean" t-att-style="'' if course.gender_field else 'display:none;'" data-name="Field">
+                            <div class="col-lg-3 col-md-4 " style="margin-top: -10px;">
+                              <label class="col-form-label" for="gender">Gender
+                              </label>
+                            </div>
+                            <div class="col-lg-7 col-md-8">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="maleGender" value="male" t-att-required="course.gender_field or None" />
+                                <label class="form-check-label" for="maleGender">
+                                  Male
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="femaleGender" value="female" t-att-required="course.gender_field or None" />
+                                <label class="form-check-label" for="femaleGender">
+                                  Female
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group row form-field o_website_form_required_custom mb-3" t-att-style="'' if course.hadf_support_field else 'display:none;'" data-type="boolean" data-name="Field">
+                            <div class="col-lg-6 col-md-4 " style="margin-top: -10px;">
+                              <label class="col-form-label" for="has_support">
+                                Have you received support from the Human Resources Development Fund (HRDF)?
+                              </label>
+                            </div>
+                            <div class="col-lg-6 col-md-8">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="has_support" value="true" t-att-required="course.hadf_support_field or None" />
+                                <label class="form-check-label" for="true">
+                                  Yes
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="has_support" value="false" t-att-required="course.hadf_support_field or None" />
+                                <label class="form-check-label" for="false">
+                                  No
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group row form-field o_website_form_required_custom mb-3" t-att-style="'' if course.work_field else 'display:none;'" data-type="boolean" data-name="Field">
+                            <div class="col-lg-3 col-md-4 " style="margin-top: -10px;">
+                              <label class="col-form-label" for="has_work">
+                                Have you worked before?
+                              </label>
+                            </div>
+                            <div class="col-lg-7 col-md-8">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="has_work" value="true" t-att-required="course.work_field or None" />
+                                <label class="form-check-label" for="true">
+                                  Yes
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="has_work" value="false" t-att-required="course.work_field or None" />
+                                <label class="form-check-label" for="false">
+                                  No
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group row form-field o_website_form_required_custom mb-3" t-att-style="'' if course.student_field else 'display:none;'" data-type="boolean" data-name="Field">
+                            <div class="col-lg-3 col-md-4 " style="margin-top: -10px;">
+                              <label class="col-form-label" for="is_student">
+                                Are you Student Now?
+                              </label>
+                            </div>
+                            <div class="col-lg-7 col-md-8">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="is_student" value="true" t-att-required="course.student_field or None" />
+                                <label class="form-check-label" for="true">
+                                  Yes
+                                </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="is_student" value="false" t-att-required="course.student_field or None" />
+                                <label class="form-check-label" for="false">
+                                  No
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group row form-field o_website_form_required_custom mb-3" t-att-style="'' if course.general_abilities_field else 'display:none;'" data-type="float" data-name="Field">
+                            <div class="col-lg-3 col-md-4 ">
+                              <label class="col-form-label" for="abilities">
+                                What is the percentage of general abilities?
+                              </label>
+                            </div>
+                              <div class="col-lg-7 mt-1 col-md-8">
+                                <input class="form-control o_website_form_input" name="abilities" t-att-required="course.general_abilities_field or None" t-att-onblur="'validateAbilitiesInput()' if course.general_abilities_field else ''">
+                                </input>
+                                <small id="abilities_error" class="text-danger" style="display:none;">Please enter a valid number between 1 and 100.</small>
+                              </div>
+                          </div>
+
+                          <div class="form-group row form-field o_website_form_required_custom mb-3"  t-att-style="'' if course.high_school_percentage_field else 'display:none;'" data-type="float" data-name="Field">
+                            <div class="col-lg-3 col-md-4 ">
+                              <label class="col-form-label" for="high_school">
+                                What is the percentage of high school?
+                              </label>
+                            </div>
+                            <div class="col-lg-7 col-md-8">
+                              <input class="form-control mt-1 o_website_form_input" name="high_school" t-att-required="course.high_school_percentage_field or None" t-att-onblur="'validateHighSchoolInput()' if course.high_school_percentage_field else ''">
+                              </input>
+                              <small id="high_school_error" class="text-danger" style="display:none;">Please enter a valid number between 1 and 100.</small>
+                            </div>
+                            
+                          </div>
+
+
+                          <div class="form-group row form-field o_website_form_required_custom mb-3"  t-att-style="'' if course.nationality_field else 'display:none;'">
+                            <div class="col-lg-3 col-md-4 ">
+                              <label class="col-form-label label-optional" for="country_id">
+                                Nationality
+                              </label>
+                            </div>
+                            <div class="col-lg-7 col-md-8">
+                              <select style="width:100%;" class="form-control o_website_form_input" id="country_id" name="country_id" t-att-required="course.nationality_field or None">
+                                <option value="">select...</option>
+                                <t t-foreach="nationalities" t-as="nationality">
+                                  <option t-att-value="nationality.id">
+                                    <t t-esc="nationality.name" />
+                                  </option>
+                                </t>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group row form-field o_website_form_required_custom mb-3" data-type="date" data-name="Field">
+                            <div class="col-lg-3 col-md-4 ">
+                              <label class="col-form-label" for="birth_date">
+                                Birth Date
+                              </label>
+                            </div>
+                            <div class="col-lg-7 col-md-8">
+                              <input class="form-control o_website_form_input" type="date" name="birth_date" required="True">
+                              </input>
+                            </div>
+                          </div>
+
+
+                          <script type="text/javascript">
+                            function validateHighSchoolInput() {
+                              var highSchoolInput = document.querySelector('input[name="high_school"]');
+                              var highSchoolValue = highSchoolInput.value;
+                              var errorMessage = document.getElementById('high_school_error'); // Error message element
+                          
+                              // Check if the input is a number and within the range 1-100
+                              if (isNaN(highSchoolValue) || highSchoolValue &lt; 1 || highSchoolValue &gt; 100) {
+                                errorMessage.style.display = 'block';
+                                highSchoolInput.classList.add('is-invalid');
+                                highSchoolInput.focus();
+                              } else {
+                                errorMessage.style.display = 'none';
+                                highSchoolInput.classList.remove('is-invalid');
+                              }
+                            }
+                            function validateAbilitiesInput() {
+                              var abilitiesInput = document.querySelector('input[name="abilities"]');
+                              var abilitiesValue = abilitiesInput.value;
+                              var errorMessage = document.getElementById('abilities_error'); // Error message element for abilities
+                          
+                              // Check if the input is a number and within the range 1-100
+                              if (isNaN(abilitiesValue) || abilitiesValue &lt; 1 || abilitiesValue &gt; 100) {
+                                errorMessage.style.display = 'block';
+                                abilitiesInput.classList.add('is-invalid');
+                                abilitiesInput.focus();
+                              } else {
+                                errorMessage.style.display = 'none';
+                                abilitiesInput.classList.remove('is-invalid');
+                              }
+                            }
+                          </script>
+                          
+                          <div class="form-group row" style="margin: 20px auto !important;">
+                            <div class="offset-lg-4 offset-md-5 col-md-4 col-lg-7 ">
+                              <button type="submit" class="btn btn-primary text-center" style="width:50%">
+                                Submit
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      
+
+
+                    </form>
+                  </section>
+                  
+              </div>
+
+            </div>
+          </div>
+        </div>
+        </form>
+      </t>
+    </template>
+
+    <template id="registration_app.upload_doc" name="Upload Doc">
+      <t t-call="portal.frontend_layout">
+        <div class="container">
+          <t t-if="error">
+            <div class="alert alert-danger" role="alert">
+              <t t-esc="error"/>
+            </div>
+          </t>
+          <h2>Please <t t-esc="applicant.applicatian_name"/> Upload Required Documents</h2>
+          <form method="post" class="form mt-5" enctype="multipart/form-data" onsubmit="return validateFile()">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+            <div class="card md-2" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); width: 100%; margin: auto;">
+              <div class="card-header bg-primary text-white">
+                <h3> Information</h3>
+              </div>
+              <div class="card-body">
+                <div class="form-group row form-field o_website_form_required_custom mb-3" data-type="date" data-name="Field">
+                  <div class="col-lg-5 col-md-4 ">
+                    <label class="col-form-label" for="pdf_file"> Please attach the following documents in one file as PDF
+                      <ul>
+                        <li>High school diploma</li>
+                        <li>General Abilities Certificate</li>
+                        <li>English language test certificate, if any</li>
+                      </ul>
+                    </label>
+                  </div>
+                  <div class="col-lg-7 col-md-8">
+                    <input id="pdf_file" class="form-control o_website_form_input o_resume_input" style="width:70%;" type="file" name="pdf_file" accept="application/pdf" required="True" />
+                    <small class="form-text text-muted">Maximum file size: 10 MB</small>
+                  </div>
+                </div>
+    
+                <!-- JavaScript for File Validation -->
+                <script type="text/javascript">
+                  function validateFile() {
+                    var fileInput = document.getElementById('pdf_file');
+                    var file = fileInput.files[0];
+                    var maxSize = 10 * 1024 * 1024; // 10 MB in bytes
+    
+                    // Check if file is selected
+                    if (!file) {
+                      alert('Please select a file.');
+                      return false; // Prevent form submission
+                    }
+    
+                    // Validate file type
+                    if (file.type !== 'application/pdf') {
+                      alert('Please upload a PDF file.');
+                      return false; // Prevent form submission
+                    }
+    
+                    // Validate file size
+                    if (file.size &gt; maxSize) {
+                      alert('The file size exceeds the maximum limit of 10 MB. Please choose a smaller file.');
+                      return false; // Prevent form submission
+                    }
+                    return true; // Allow form submission
+                  }
+                </script>
+              </div>
+            </div>
+            <div class="form-group row" style="margin: 20px auto !important;">
+              <div class="offset-lg-4 offset-md-5 col-md-4 col-lg-7 ">
+                <button type="submit" class="btn btn-primary text-center" style="width:50%">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </t>
+    </template>
+    
+  </data>
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="registration_application_upload_doc_mail" model="mail.template">
+        <field name="name">Upload Document</field>
+        <!-- <field name="email_from">{{object.request_by.mail}}</field> -->
+        <field name="subject">Upload Required Document {{object.course_id.name}}</field>
+        <!-- <field name="email_to">{{object.employee_id.work_email}}</field> -->
+        <field name="model_id" ref="model_registration_application"/>
+        <field name="auto_delete" eval="False"/>
+        <field name="body_html" type="html">
+            <table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                <tr>
+                    <td valign="top">
+                        <h2>Dear/ <t t-esc="object.applicatian_name"/></h2>
+                        <div style="font-size: 13px;">
+                            Your application is really interesting and we'd like to plan an interview with you.<br/>
+                            Can you please use the button below to schedule it with one of our recruiters?
+                            <br/><br/>
+                        </div>
+                        <a t-att-href="object.document_url"
+                            style="background-color: #875a7b; text-decoration: none; color: #fff; padding: 8px 16px 8px 16px; border-radius: 5px;"><t t-esc="object.document_url"/></a>
+                    </td>
+                </tr>
+            </table>
+        </field>
+    </record>
+
+</odoo>

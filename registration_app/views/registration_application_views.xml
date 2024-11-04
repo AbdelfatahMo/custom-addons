@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View registration_application View List -->
+    <record id="view_registration_application_list" model="ir.ui.view">
+        <field name="name">view.registration_application.list</field>
+        <field name="model">registration.application</field>
+        <field name="arch" type="xml">
+            <tree>
+                <header>
+                    <button string="Send Mail For Document" name="send_doc_mails"  type="object" class="oe_highlight"/>
+                    <button string="Ask Document" name="set_as_ask_document" type="object" class="oe_highlight"/>
+                </header>
+                <field name="course_id"/>
+                <field name="applicatian_name"/>
+                <field name="is_accepted"/>
+                <field name="applicatian_national_id"/>
+                <field name="applicatian_mobile"/>
+                <field name="applicatian_mail"/>
+                <field name="applicatian_gender"/>
+                <field name="applicatian_nationality"/>
+                <field name="applicatian_birth_date"/>
+                <field name="age"/>
+                <field name="is_applicatian_hadf_support"/>
+                <field name="is_applicatian_work" />
+                <field name="is_applicatian_student" />
+                <field name="percentage_of_general_abilities" />
+                <field name="high_school_percentage" />
+                <field name="document" widget="many2many_binary" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- View registration_application form -->
+    <record id="view_registration_application_form" model="ir.ui.view">
+        <field name="name">view.registration_application.form</field>
+        <field name="model">registration.application</field>
+        <field name="arch" type="xml">
+            <form string="Registration_application">
+                <header>
+                    <button string="Send Mail For Document" name="send_doc_mails" invisible="mail_sent or not document_ask" type="object" class="oe_highlight"/>
+                    <button string="Ask Document" name="set_as_ask_document" invisible="document_ask" type="object" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="applicatian_name"/>
+                        <h1>
+                            <field name="applicatian_name" placeholder="Name..."/>
+                        </h1>
+                        <label for="acceptance_rate"/>
+                        <h3>
+                            <field name="acceptance_rate" placeholder="Name..."/>
+                        </h3>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="course_id"/>
+                            <field name="is_accepted"/>
+                            <field name="applicatian_national_id"/>
+                            <field name="applicatian_mobile"/>
+                            <field name="applicatian_mail"/>
+                            <field name="applicatian_gender"/>
+                            <field name="applicatian_birth_date" />
+                            <field name="age"/>
+                            <field name="applicatian_nationality"/>
+                        </group>
+                        <group>
+                            <field name="is_applicatian_hadf_support"/>
+                            <field name="is_applicatian_work" />
+                            <field name="is_applicatian_student" />
+                            <field name="percentage_of_general_abilities" />
+                            <field name="high_school_percentage" />
+                            <field name="document_ask" />
+                            <field name="document_url" invisible="not document_ask" />
+                            <field name="mail_sent" />
+                            <field name="document" widget="many2many_binary"/>
+                        </group>
+                    
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- View registration_application search -->
+    <record id="view_registration_application_search" model="ir.ui.view">
+        <field name="name">view.registration_application.search</field>
+        <field name="model">registration.application</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="course_id"/>
+                <field name="applicatian_national_id"/>
+                <field name="applicatian_mobile"/>
+                <field name="applicatian_mail"/>
+                <field name="applicatian_gender"/>
+                <field name="applicatian_birth_date" />
+                <field name="applicatian_nationality"/>
+                <field name="percentage_of_general_abilities" />
+                    <field name="high_school_percentage" />
+                <filter string="Abilities +80%" name="abbilities80" domain="[('percentage_of_general_abilities','&gt;=',80)]" />
+                <filter string="High School +80%" name="high_school80" domain="[('high_school_percentage','&gt;=',80)]" />
+                <group expand="1" string="Group By">
+                    <filter string="Gender" name="applicatian_gender_groub_by" domain="[]" context="{'group_by':'applicatian_gender'}"/>
+                    <filter string="Is Hadf Support?" name="is_applicatian_hadf_support_group_by" domain="[]" context="{'group_by':'is_applicatian_hadf_support'}"/>
+                    <filter string="Is Work?" name="is_applicatian_work_group_by" domain="[]" context="{'group_by':'is_applicatian_work'}"/>
+                    <filter string="Is Student?" name="is_applicatian_student_group_by" domain="[]" context="{'group_by':'is_applicatian_student'}"/>
+                    <filter string="Is Accepted?" name="is_accepted_group_by" domain="[]" context="{'group_by':'is_accepted'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action registration_application -->
+    <record id="action_registration_application" model="ir.actions.act_window">
+        <field name="name">Registration Applications</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">registration.application</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem
+        id="registration_applications_menu"
+        name="Registration Applications"
+        action="registration_app.action_registration_application"
+        parent="website_slides.website_slides_menu_courses"
+        sequence="10"/>
+</odoo>
